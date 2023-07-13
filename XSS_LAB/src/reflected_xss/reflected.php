@@ -24,15 +24,15 @@ if (isset($_COOKIE['cookie_name'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>XSS - Cross Site Scripting</title>
-  <link href="/xss/Image/favicon.ico" rel="icon" type="image/x-icon">
+  <link href="../Image/favicon.ico" rel="icon" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/2.3.4/mini-dark.min.css">
 </head>
 
 <body>
   <header>
 
-    <a href="\XSS_LAB\src\index.php" class="logo">XSS LAB</a>
-    <a href="\XSS_LAB\src\reflected_xss\reflected.php" class="button">Reflected XSS</a>
+    <a href="..\index.php" class="logo">XSS LAB</a>
+    <a href=".\reflected.php" class="button">Reflected XSS</a>
     <strong class="user-info">
       <?php if (isset($_COOKIE["cookie_name"])):
         echo "User: " . $username;
@@ -53,7 +53,7 @@ if (isset($_COOKIE['cookie_name'])) {
         </ul>
         <h5 align="center">Mô tả: Chiếm lấy cookie Admin và đăng nhập vào user Admin!</h5>
 
-        <form action="\XSS_LAB\src\reflected_xss\reflected.php" method="get" accept-charset="utf-8" id="form">
+        <form action="reflected.php" method="get" accept-charset="utf-8" id="form">
           Your name: <input type="text" name="name" placeholder="Enter your name" autofocus required>
           <button type="submit" class="primary" value="Submit!">Submit!</button>
         </form>
@@ -110,7 +110,7 @@ if (isset($_COOKIE['cookie_name'])) {
         // Kết nối với cơ sở dữ liệu
         
         ?>
-        <form action="\XSS_LAB\src\reflected_xss\reflected.php" method="POST">
+        <form action="reflected.php" method="POST">
           Nhập Flag: <input type="input" name="flag">
           <button type="submit" class="primary" value="Submit!">Submit!</button>
         </form>

@@ -20,15 +20,15 @@ if (isset($_COOKIE['cookie_name'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Stored-XSS</title>
-    <link href="/xss/Image/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="../Image/favicon.ico" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/2.3.4/mini-dark.min.css">
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
 </head>
 
 <body>
     <header>
-        <a href="\XSS_LAB\src\index.php" class="logo">XSS LAB</a>
-        <a href="\XSS_LAB\src\stored_xss\stored.php" class="button">Stored XSS</a>
+        <a href="..\index.php" class="logo">XSS LAB</a>
+        <a href=".\stored_xss\stored.php" class="button">Stored XSS</a>
         <strong class="button user-info">
             <?php if (isset($_COOKIE["cookie_name"])):
                 echo "User: " . $username;
@@ -64,7 +64,7 @@ if (isset($_COOKIE['cookie_name'])) {
                 <h5 align="center">Vẫn là alert Cookie để win :33</h5>
 
                 <div>
-                    <img src=/xss/Image/Image.jpg>
+                    <img src=../Image/Image.jpg>
                 </div>
                 <h5>Bình luận về hình ảnh trên:</h5>
 
@@ -87,7 +87,7 @@ if (isset($_COOKIE['cookie_name'])) {
                     <button type="button" title="Hint 3"
                         onclick='alert("Load lại trang để đọc comment mới\nSorry vì sự code lỏd này!")'>3</button>
                 </div>
-                <form action="\XSS_LAB\src\stored_xss\stored.php" method="POST">
+                <form action="stored.php" method="POST">
                     Nhập Flag: <input type="input" name="flag">
                     <button type="submit" class="primary" value="Submit!">Submit!</button>
                 </form>
@@ -106,7 +106,7 @@ if (isset($_COOKIE['cookie_name'])) {
                     function submitForm() {
                         var xhr = new XMLHttpRequest();
                         var formData = new FormData(document.getElementById("commentForm"));
-                        xhr.open("POST", "/xss/stored_xss/stored.php", true);
+                        xhr.open("POST", "stored.php", true);
                         xhr.onreadystatechange = function () {
                             if (xhr.readyState === 4 && xhr.status === 200) {
                                 // Xử lý kết quả trả về nếu cần thiết

@@ -35,7 +35,7 @@ if ($conn->connect_error) {
 
     // Hàm tự động chuyển hướng và trở về trang cũ
     function auto_Load() {
-        window.location.href = "http://localhost/XSS/admin_reflected.php";
+        window.location.href = "http://localhost/XSS_LAB/admin_reflected/admin_reflected.php";
     }
 
     // Gọi hàm tự động chuyển hướng và trở về sau khoảng thời gian

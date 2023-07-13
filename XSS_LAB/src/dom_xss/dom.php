@@ -20,7 +20,7 @@ if (isset($_COOKIE['cookie_name'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DOM-BASED XSS</title>
-    <link href="/xss/Image/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="./Image/favicon.ico" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/2.3.4/mini-dark.min.css">
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
 
@@ -28,8 +28,8 @@ if (isset($_COOKIE['cookie_name'])) {
 
 <body>
     <header>
-        <a href="\XSS_LAB\src\index.php" class="logo">XSS LAB</a>
-        <a href="\XSS_LAB\src\dom_xss\dom.php?default=English" class="button">DOM-based XSS</a>
+        <a href="..\index.php" class="logo">XSS LAB</a>
+        <a href=".\dom.php?default=English" class="button">DOM-based XSS</a>
         <strong class="user-info">
             <?php if (isset($_COOKIE["cookie_name"])):
                 echo "User: " . $username;
@@ -50,7 +50,7 @@ if (isset($_COOKIE['cookie_name'])) {
             float: right;
             margin-left: 10px;
             margin-top: 5px;
-        }
+        }   `
 
         .button {
             display: inline-block;
@@ -100,7 +100,7 @@ if (isset($_COOKIE['cookie_name'])) {
                             <button id="btn-1" type="button" title="Hint 1" onclick='alert("\"Flag\"")'>1</button>
                         </div>
                 </form>
-                <form action="\XSS_LAB\src\dom_xss\dom.php?default=English" method="POST">
+                <form action="dom.php?default=English" method="POST">
                     Nhập Flag: <input type="input" name="flag">
                     <button type="submit" class="primary" value="Submit!">Submit!</button>
                 </form>

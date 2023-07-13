@@ -13,9 +13,9 @@
 <body>
   <header>
     <a href="index.php" class="logo">XSS LAB</a>
-    <a href="\XSS_LAB\src\reflected_xss\reflected.php" class="button">Reflected XSS</a>
-    <a href="\XSS_LAB\src\stored_xss\stored.php" class="button">Stored XSS</a>
-    <a href="\XSS_LAB\src\dom_xss\dom.php?default=English" class="button">DOM-based XSS</a>
+    <a href=".\reflected_xss\reflected.php" class="button">Reflected XSS</a>
+    <a href=".\stored_xss\stored.php" class="button">Stored XSS</a>
+    <a href=".\dom_xss\dom.php?default=English" class="button">DOM-based XSS</a>
   </header>
   <script>alert("Chào mừng các hách cơ lỏ đến với trang web của iem <3\nDeveloped by Thànhh!")</script>
 
